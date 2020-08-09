@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Face Recognition</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      /* display: flex; */
+      /* justify-content: right;
+      align-items: right; */
+      flex-direction: column
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .train{
+      position: absolute;
+      top:70px;
+      right:0;
+
+    }
+
+    .info{
+      position: absolute;
+      top:20px;
+      right:0;
+
+    }
+
+
+    .output{
+      position: absolute;
+      top:55px;
+      left:700px;
+
+    }
+    #can1{
+      position: absolute;
+      top:55px;
+      left:700px;
+    }
+
+    #output{
+      position: absolute;
+      top:100px;
+      left:400px;
+
+    }
+    #infoText{
+      position: absolute;
+      top:10px;
+      left:20px;
+
+    }
+    .browse{
+      position: absolute;
+      top:60px;
+      left:450px;
+     
+
+    }
+    #scan{
+      position: absolute;
+      top:60px;
+      left:300px;
+      width:100px
+    }
+
+   .video{
+    position:absolute;
+    top:100px;
+    left:20px;
+    }
+    .capture-button{
+    position: absolute;
+    top:60px;
+    left:20px;
+
+    }
+    .name{
+    position: absolute;
+    top:80px;
+    left:450px;
+
+    }
+    #screenshot-button{
+    position: absolute;
+    top:60px;
+    left:150px;
+    }
+    .webcam
+    {
+    position: absolute;
+    top:100px;
+    left:20px;
+    }
+  
+  </style>
+</head>
+<body>
+  <button class="info" id="but1">Training Info</button> 
+<div class="train">
+  <h4>Trained Images of Nikhil</h4>
+  <img id="img1" width="200" height="200" src="labeled_images/Nikhil/1.JPG"></img>
+  <img id="img2"  width="200" height="250"  src="labeled_images/Nikhil/2.JPG"></img>
+  <br>
+  <p>________________________________________________________________________________</p><br>
+ </div>
+ <p id="infoText"></p>
+ <input class ="browse" type="file" id="imageUpload">
+ <p id="name" class="name">Detection Status</p>
+ <div class="video" height="500"></div>
+  <!--  -->
+  <div id="screenshot" style="text-align:center;">
+   <button class="capture-button">open video</button>
+  <button id="screenshot-button">Take snapshot</button>
+  <button id="scan">scan</button>
+  <video class="webcam"autoplay></video>
+  <canvas id ="can2" style="display:none;"></canvas> 
+  <img class="pic" style="display: node;"><img>
+</div>
+<!-- <div style="position: relative;" id="output">
+<canvas id ="can1" class="canv" ></canvas>
+</div> -->
+  <!--  -->
+</div>
+</body>
+</html>
+
+
+
+
+
